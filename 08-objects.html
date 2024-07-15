@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    <script>
+        /*
+        //object groups multiple objects together
+        const product = {
+            name: 'socks', //property:value (property-value pair)
+            price: 1090
+        };
+        console.log(product);
+        console.log(product.name); //access the value that is associated with name property 
+        console.log(product.price);
+
+        product.name = 'cotton socks'; //changing the value
+        console.log(product.name);
+
+        product.newProperty = true; //makes new property called newProperty with value true
+        console.log(product)
+
+        delete product.newPorperty; //deletes newProperty*/
+
+        const product2 = {
+            name:'shirt',
+            'delivery-time': '1 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1() {
+                console.log('function inside object') //function inside object is called a method
+            }
+        };
+        console.log(product2);
+        console.log(product2.name);
+
+        console.log(product2['name']); //called bracket notation
+        console.log(product2['delivery-time']);
+
+        console.log(product2.rating.count); 
+
+        product2.fun();
+
+        console.log(typeof console)
+        console.log(typeof console.log);
+
+        //why we use JSON: more universially understood so it is used when we send data between computers that may use different programming languages
+        JSON.stringify(product2) //converts the object to JSON
+        console.log(JSON.stringify(product2)); 
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString)); //.parse turns it back into Javascript 
+    </script>
+  </body>
+</html>
