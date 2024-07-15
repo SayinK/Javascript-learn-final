@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    <script>
+        function function1() {
+            console.log('hello')
+            console.log(2+2)
+        }
+
+       // function1(); //calling the function
+
+        //the equal sign assigns a defult value
+        function calculateTax(cost, taxPercent = 0.1){ //cant use cost outside of function
+            console.log(cost * taxPercent)
+        }
+        calculateTax(2000, 0.2); //passing a value into the function (argument)
+    </script>
+  </body>
+</html>
