@@ -3,6 +3,39 @@
   <head>
     <title>DOM Projects</title>
     <style>
+        body{
+            font-family: Arial;
+        }
+        .subscribe-button{
+            border: none;
+            background-color: black;
+            color:white;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:15px;
+            padding-right:15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .is-scubscribed{
+            background-color:rgb(240,240,240);
+            color:black;
+        }
+
+        .cost-input{
+            font-size:15px;
+            padding: 10px;
+        }
+        .calculate-button{
+            background-color:green;
+            color:white;
+            border: none;
+            padding:12px 15px;
+            font-size:15px;
+            cursor: pointer;
+        }
 
     </style>
   </head>
@@ -11,7 +44,8 @@
     <p>
         YouTube Subscribe Button
     </p>
-    <button onclick = "subscribe();" class="js-subscribe-button">
+
+    <button onclick = "subscribe();" class="js-subscribe-button subscribe-button">
         Subscribe
     </button>
 
@@ -19,10 +53,10 @@
         Amazon Shipping Calculator
     </p>
 
-    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="handleCostKeyDown(event)";>
+    <input placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="handleCostKeyDown(event)";>
 
     <!--clicks, keydowns = events; onclick, onkeydown=event listeners-->
-    <button onclick="calculateTotal();">
+    <button onclick="calculateTotal();" class="calculate-button">
         Calculate
     </button>
 
@@ -59,10 +93,13 @@
             const buttonElement = document.querySelector('.js-subscribe-button'); 
             if(buttonElement.innerText === 'Subscribe') {
                 buttonElement.innerText = 'Subscribed';
+                buttonElement.classList.add('is-scubscribed') //adding a class to the button so we can style it in CSS
             }
             else{
                 buttonElement.innerText = 'Subscribe';
+                buttonElement.classList.remove('is-scubscribed'); //removes the class
             }
+
         }
     </script>
   </body>
