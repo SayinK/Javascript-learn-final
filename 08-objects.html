@@ -9,7 +9,7 @@
 
   <body>
     <script>
-        /*
+        
         //object groups multiple objects together
         const product = {
             name: 'socks', //property:value (property-value pair)
@@ -25,7 +25,14 @@
         product.newProperty = true; //makes new property called newProperty with value true
         console.log(product)
 
-        delete product.newPorperty; //deletes newProperty*/
+        delete product.newPorperty; //deletes newProperty
+
+
+
+
+
+
+
 
         const product2 = {
             name:'shirt',
@@ -52,11 +59,56 @@
         console.log(typeof console.log);
 
         //why we use JSON: more universially understood so it is used when we send data between computers that may use different programming languages
-        JSON.stringify(product2) //converts the object to JSON
+        JSON.stringify(product2) //converts the object to JSON (JSON is a string type)
         console.log(JSON.stringify(product2)); 
 
         const jsonString = JSON.stringify(product2);
-        console.log(JSON.parse(jsonString)); //.parse turns it back into Javascript 
+        console.log(JSON.parse(jsonString)); //.parse turns it back into Javascript
+
+
+
+
+
+
+        console.log('hello'.length());
+        console.log('hello'.toUpperCase()); //this is due to auto-boxing (automatically wraps string in a box)
+
+        const object1 = {
+            message: 'hello'
+        };
+        const object2=object1; //makes copy of the reference (copy by reference)
+        object1.message = 'Good Job';
+        console.log(object1);
+        console.log(object2);
+
+        const object3={
+            message: 'Good Job'
+        };
+        console.log(object3===object1) //will say false since objects are references (compares the references and not the acutal values)
+        console.log(object2 === object1) //will say true since they have same reference 
+
+        const object4={
+            message: 'Good Job',
+            price: 799
+        };
+
+        //const message = object4.message;
+        const {message,price} = object4 //destructuring
+        console.log(message) //will say 'Good Job'
+        console.log(price) //will display 799
+
+        const object5 = {
+            //message: message
+            message, //known as short hand property
+            /*method:function function1(){
+                console.log('method');
+            }*/
+            method(){
+                console.log('method') //does the same thing as above code commented out
+            }
+        };
+        console.log(object5);
+        console.log(object5.method());
     </script>
   </body>
 </html>

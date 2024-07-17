@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    <button>
+        hello
+    </button>
+    <button class="js-button">
+        Second Button
+    </button>
+    <script>
+        //the document object represents/models the webpage (will change the webpage)
+        //the DOM combines Javascript and HTML together
+        document.body.innerHTML='hello'; //remove everything and page only has hello
+        document.title = 'good job'
+
+        console.log(document.title);
+        document.title = 'Changed';
+
+        console.log(document.body);
+        console.log(typeof document.body); 
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = 'Changed' //replaces all html to Changed (can see in element)
+        document.body.innerHTML = '<button>Good Job!</button>';
+
+        //document.querySelector(): lets us get any element from the page and put it inside Javascript
+        console.log(document.querySelector('button').innerHTML); //got the button element
+        document.querySelector('button')
+            .innerHTML = 'Changed';
+        
+        const buttonElement = document.querySelector('.js-button'); //. means we are looking for a class
+        console.log(buttonElement);
+
+
+
+    </script>
+  </body>
+</html>
