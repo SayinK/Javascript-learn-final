@@ -75,7 +75,7 @@
     
       for (let i = 1; i<=10;i++){
         if (i%3===0){
-          continue; //will skip 3 in the loop
+          continue; //will skip 3 and 6 in the loop
         }
         console.log(i);
         if (i===8){
@@ -83,7 +83,31 @@
         }
       }
 
+      let i = 1;
+      while (i<=10){
+        if(i%3===0){
+          i++; //make sure to include incerment step manually
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
 
+      function doubleArray(nums){
+        const nums = [];
+        const numsDoubled = [];
+        for(i=0; i<nums.length;i++){
+          if(num ===0){
+            return numsDoubled;
+          }
+          const num = nums[i] * 2;
+          numsDoubled.push(num);
+        }
+        return numsDoubled;
+      }
+
+      console.log(doubleArray([1,1,3]));
+      console.log(doubleArray([2,2,5]));
 
     </script>
   </body>

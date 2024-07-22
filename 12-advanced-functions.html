@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    <button onclick="" class="js-button">
+        Click
+    </button>
+
+    <script>
+        const buttonElement = document.querySelector('.js-button');
+        const eventListener= ()=>{
+            console.log('click')};
+
+        buttonElement.addEventListener('click', eventListener());
+        buttonElement.removeEventListener('click', eventListener());
+        buttonElement.addEventListener('click', ()=>{
+            console.log('click2');
+        });
+
+        
+        /*function greeting(){
+            console.log('hello');
+        }
+        greeting();
+
+        const function1 = function(){
+            console.log('hello2');
+        };
+        console.log(function1);
+        console.log(typeof function1); //will say its a function
+        function1(); //will say hello2
+
+
+        const object1 = {
+            num:2,
+            fun:function(){
+                console.log('hello3');
+            }
+        }
+        object1.fun(); //will display hello3
+
+        function display(param){
+            console.log(param);
+        }
+        display(2);
+
+        function run(param){
+            param(); //will print hello4
+        }
+        num(function(){
+            console.log('hello4');
+        })//passing a function*/
+
+        /*setTimeout(function(){
+            console.log('timeout');
+            console.log('timeout2');
+        }, 3000); //wait for 3 sec then run function
+
+        console.log('next line'); //this line will display first (asynchronous code)
+
+        setInterval(function(){
+            console.log('interval');
+        }, 3000); //every 3 seconds will display interval*/
+
+        /*['make dinner','wash dishes', 'watch youtube'].forEach((value, index) => {
+            if(value==='wash dishes'){
+                return; //will end function early and go to the next (skips wash dishes)
+            }
+            console.log(index); 
+            console.log(value);
+        }); //will loop through the array
+
+
+
+        const regularFunction = function(param, param2){
+            console.log('hello');
+            return(5);
+        };
+        const arrowFunction = (param, param2) => {
+            console.log('hello');
+            return(5);
+        };
+        arrowFunction(); //will display hello
+
+        const oneParam = param => {
+            console.log(param + 1);
+        };
+        oneParam(2); //will display 3
+
+        const oneLine = () => 2 + 3;
+        console.log(oneLine()); //will return 5
+
+
+        const object2 = {
+            method: ()=>{
+
+            },
+            method(){
+
+            } //short-hand method syntax
+        }*/
+
+
+
+    </script>
+  </body>
+</html>

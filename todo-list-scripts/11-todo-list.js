@@ -20,6 +20,7 @@ function renderTodoList() {
       `;
         todoListHTML += html;
     }
+    
     console.log(todoListHTML);
     document.querySelector('.js-todo-list')
         .innerHTML = todoListHTML;
